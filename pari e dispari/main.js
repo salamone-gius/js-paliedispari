@@ -6,24 +6,24 @@
 // Dichiariamo chi ha vinto.
 
 // 1. dichiaro le variabili vuote a cui darò un valore più avanti
-let choice;
+let userChoice;
 let even;
 let odd;
 let userNumber;
 
-// 2. chiedo all'utente di scegliere tra pari e dispari FINTANTO CHE choice sarà diversa da 'pari' E diversa da 'dispari'
+// 2. chiedo all'utente di scegliere tra pari e dispari FINTANTO CHE userChoice sarà diversa da 'pari' E diversa da 'dispari'
 do {
-    choice = (prompt("Scegli pari o dispari?"));
-} while ((choice != "pari") && (choice != "dispari"))
+    userChoice = (prompt("Scegli pari o dispari?"));
+} while ((userChoice != "pari") && (userChoice != "dispari"))
 
 // 3. salvo la scelta dell'utente in variabili già dichiarate
-if (choice === "dispari") {
-    odd = choice;
-} else {
-    even = choice;
-}
+// if (userChoice === "dispari") {
+//     odd = userChoice;
+// } else {
+//     even = userChoice;
+// }
 
-console.log("choice =", choice);
+console.log("userChoice =", userChoice);
 console.log("even =", even);
 console.log("odd =", odd);
 
@@ -42,7 +42,7 @@ function randomNumberGen(min, max) {
 } 
 
 // 6. genero con la funzione randomNumberGen un numero randomico intero tra 1 e 5 e lo salvo nella let randomNumber
-let randomNumber = randomNumberGen(5, 1);
+let randomNumber = randomNumberGen(1, 5);
 
 console.log("randomNumber =", randomNumber);
 
@@ -55,13 +55,21 @@ console.log(typeof sum);
 // 8. creo una funzione che, inserendo un numero, mi dica se è pari o dispari
 function oddOrEven(number) {
     if (number % 2 === 1) {
-        result = "odd";
+        result = "dispari";
     } else {
-        result = "even";
+        result = "pari";
     }
     return result
 }
 
 // 9. con la funzione oddOrEven stabilisco se sum è pari o dispari
-let parity = oddOrEven(sum);
-console.log("result =", result);
+let parityFactor = oddOrEven(sum);
+console.log("result =", parityFactor);
+
+// 10. dichiaro chi è il vincitore tra utente e computer
+//     SE userChoice è uguale a parityFactor stampo "HAI VINTO! ;-)", ALTRIMENTI stampo "hai perso :-("
+if (userChoice === parityFactor) {
+    alert("HAI VINTO! ;-)");
+} else {
+    alert("hai perso :-(");
+}
