@@ -23,4 +23,10 @@ function wordFlip() {
 // 3. salvo il risultato della funzione wordFlip nella const reverseWord
 const reverseWord = wordFlip(askWord);
 console.log(reverseWord);
-// debugger;                           
+
+// 4. verifico se la parola inserita dall'utente è palindroma o no confrontandola con se stessa al rovescio
+if (askWord === reverseWord) {
+    alert("La parola inserita è palindroma.");
+} else {
+    alert("La parola inserita non è palindroma.");
+}
