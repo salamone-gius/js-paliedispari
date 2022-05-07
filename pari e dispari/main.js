@@ -52,4 +52,16 @@ const sum = userNumber + randomNumber;
 console.log("sum =", sum);
 console.log(typeof sum);
 
+// 8. creo una funzione che, inserendo un numero, mi dica se è pari o dispari
+function oddOrEven(number) {
+    if (number % 2 === 1) {
+        result = "odd";
+    } else {
+        result = "even";
+    }
+    return result
+}
 
+// 9. con la funzione oddOrEven stabilisco se sum è pari o dispari
+let parity = oddOrEven(sum);
+console.log("result =", result);
